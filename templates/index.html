@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sarcasm Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sarcasm Detection</h1>
+        <form method="post" action="/predict">
+            <textarea name="text" placeholder="Enter your sentence..." required></textarea><br>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+            <div class="result">
+                <strong>Input:</strong> {{ input_text }} <br>
+                <strong>Prediction:</strong> {{ result }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
