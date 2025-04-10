@@ -50,8 +50,9 @@ def download_model():
 download_model()
 
 # Load model and tokenizer
-model = TFBertForSequenceClassification.from_pretrained("model")
-tokenizer = BertTokenizer.from_pretrained("model")
+model = TFBertForSequenceClassification.from_pretrained('bert-base-uncased')
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model.load_weights(MODEL_PATH)
 
 model.load_weights(MODEL_PATH)
 MAX_LEN = 64
