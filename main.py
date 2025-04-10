@@ -12,7 +12,8 @@ import re
 app = FastAPI()
 
 # Static files (CSS)
-app.mount("/static", StaticFiles(directory="C:\\Users\\isham\\OneDrive\\Desktop\\sarcasm-detection-project\\static"), name="static")
+static_dir = os.path.join(os.path.dirname(__file__), "static")
+app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 # HTML templates
 templates = Jinja2Templates(directory="templates")
