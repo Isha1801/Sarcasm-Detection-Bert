@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+transformers
+tensorflow
+jinja2
+python-multipart
+requests
